@@ -1,21 +1,26 @@
 import React from 'react'
-import Logo from '/images/ATS_Logo.png'
+import Logo from '/images/Logo_White.png'
 
-import { FaFacebookF, FaInstagram, FaTelegram, FaTwitter } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaTelegramPlane, FaTwitter } from 'react-icons/fa'
 
 const Footer = () => {
 	return (
-		<footer className="footer bg-darkBlue relative">
-			<div className="container mx-auto pt-6">
+		<footer className="footer bg-darkBlue relative pt-1 px-6">
+			<div className="container mx-auto">
 				<div className="sm:flex sm:mt-8">
-					<div className="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
-						<div class="flex flex-col">
-							<span class="font-bold text-white uppercase md:mt-0 mb-2">Logo</span>
-							<span class="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">link 1</a></span>
-							<span class="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">link 1</a></span>
-							<span class="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">link 1</a></span>
+					<div className="mt-8 sm:mt-0 sm:w-full flex flex-col md:flex-row justify-between">
+						<div class="flex flex-col gap-y-4 mb-2">
+							<div>
+								<img src={Logo} alt="logo_white" className="h-[5rem]" />
+							</div>
+							<div className="flex flex-col gap-y-1 mb-2">
+								<p className="text-white text-md">ул. Туркестан 34/1, г. Нур-Султан, Казахстан</p>
+								<p className="text-white text-md">+7 778 995 98 62</p>
+								<p className="text-white text-md">+7 707 927 17 27</p>
+								<p className="text-white text-md">adaynygmanov@gmail.com</p>
+							</div>
 						</div>
-						<div className="flex flex-col">
+						<div className="flex flex-col mb-2">
 							<span className="font-bold text-white uppercase md:mt-0 mb-2">Навигация</span>
 							<span className="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">Главная</a></span>
 							<span className="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">Услуги</a></span>
@@ -33,7 +38,7 @@ const Footer = () => {
 									<FaInstagram className="group-hover:scale-150 transition transform duration-200 ease-out" />
 								</div>
 								<div className="group p-4 border-2 border-white rounded-md text-white">
-									<FaTelegram className="group-hover:scale-150 transition transform duration-200 ease-out" />
+									<FaTelegramPlane className="group-hover:scale-150 transition transform duration-200 ease-out" />
 								</div>
 							</div>
 							<div className="flex md:justify-between gap-x-2 md:gap-x-0">
@@ -51,12 +56,13 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="container mx-auto px-6">
+			<div className="container mx-auto">
 				<div className="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
-					<div className="sm:w-2/3 text-center py-6">
-						<p className="text-sm text-white font-bold mb-2">
+					<div className="sm:w-2/3 text-center py-6 flex justify-center gap-x-6 mb-2">
+						<p className="text-sm text-white font-bold">
 							© 2020 ATS
 						</p>
+						<p className="text-sm text-white font-bold">All rights reserved</p>
 					</div>
 				</div>
 			</div>

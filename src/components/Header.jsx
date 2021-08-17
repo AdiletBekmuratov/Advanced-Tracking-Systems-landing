@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from '/images/ATS_Logo.png'
+import Logo from '/images/Logo.png'
 import { HiOutlineMail, HiOutlinePhone } from 'react-icons/hi'
 
 
@@ -7,27 +7,22 @@ export default function Header() {
 	const [navbarOpen, setNavbarOpen] = useState(false);
 	return (
 		<>
-			<div className="flex flex-wrap items-center justify-between px-2 py-3 bg-gray-100 mb-3">
+			<div className="flex flex-wrap items-center justify-between px-2 py-2 bg-gray-100 z-50">
 				<div className="container px-4 mx-auto flex flex-wrap items-center justify-end gap-x-10">
-					<p className="text-darkBlue flex gap-x-2">
+					<p className="text-darkBlue flex items-center gap-x-2">
 						<HiOutlineMail />
 						adaynygmanov@gmail.com
 					</p>
-					<p className="text-darkBlue flex gap-x-2">
+					<p className="text-darkBlue flex items-center gap-x-2">
 						<HiOutlinePhone />
 						+7 778 995 98 62
 					</p>
 				</div>
 			</div>
-			<nav className="flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3 sticky left-0 top-0 shadow-md">
+			<nav className="flex flex-wrap items-center justify-between px-2 py-4 bg-white sticky left-0 top-0 shadow-md z-50">
 				<div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-					<div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-						<a
-							className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-							href="#pablo"
-						>
-							<img src={Logo} alt="Logo" className="h-[3rem]" />
-						</a>
+					<div className="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start">
+						<img src={Logo} alt="Logo" className="h-[3rem] ml-3" />
 						<button
 							className="text-darkBlue cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
 							type="button"
