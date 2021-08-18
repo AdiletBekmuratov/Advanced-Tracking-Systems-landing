@@ -10,11 +10,11 @@ export default function Header() {
 			<div className="flex flex-wrap items-center justify-between px-2 py-2 bg-gray-100 z-50">
 				<div className="container px-4 mx-auto flex flex-wrap items-center justify-end gap-x-10">
 					<p className="text-darkBlue flex items-center gap-x-2">
-						<HiOutlineMail />
+						<HiOutlineMail className="text-lightGreen" />
 						adaynygmanov@gmail.com
 					</p>
 					<p className="text-darkBlue flex items-center gap-x-2">
-						<HiOutlinePhone />
+						<HiOutlinePhone className="text-lightGreen" />
 						+7 778 995 98 62
 					</p>
 				</div>
