@@ -6,6 +6,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      
       fontFamily: {
         primary: ['Montserrat', ...fontFamily.sans],
       },
@@ -15,9 +16,12 @@ module.exports = {
           500: '#00c4fd',
         },
         dark: '#333333',
+        orange: '#FF7A3C',
 				darkBlue: '#005775',
-				lightGreen: '#9DC086'
+				lightGreen: '#9DC086',
+        grayObj: '#C4C4C4',
       },
+      
     },
   },
   variants: {
