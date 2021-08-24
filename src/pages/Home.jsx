@@ -1,4 +1,7 @@
 import React from 'react';
+import Notification from '@/components/Notification';
+import ContactUs from '@/components/ContactUs';
+import Partners from '@/components/Partners'
 
 export default function Home() {
 	return (
@@ -124,7 +127,20 @@ export default function Home() {
 							</div>
 							<div className="col-span-3"><img className="rounded-2xl" src="/public/images/trucks.jpg" /></div>
 						</div>
+						<h1 className='text-white font-extrabold text-6xl leading-tight'>Подходящий трекер <br /> для каждого проекта</h1>
 					</div>
+				</section>
+
+				<section>
+					<Notification />
+				</section>
+
+				<section>
+					<ContactUs />
+				</section>
+
+				<section className='flex justify-center py-40 relative'>
+					<Partners />
 				</section>
 			</main>
 		</>
