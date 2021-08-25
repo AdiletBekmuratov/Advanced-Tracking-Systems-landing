@@ -9,7 +9,7 @@ const Footer = () => {
 			<div className="container mx-auto">
 				<div className="sm:flex mt-8">
 					<div className="sm:w-full flex flex-col md:flex-row justify-between">
-						<div class="flex flex-col gap-y-4 mb-2">
+						<div className="flex flex-col gap-y-4 mb-2">
 							<div>
 								<img src={Logo} alt="logo_white" className="h-[5rem]" />
 							</div>

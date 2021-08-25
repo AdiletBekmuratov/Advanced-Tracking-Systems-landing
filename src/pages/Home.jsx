@@ -6,6 +6,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import CardMedium from '@/components/CardMedium';
 import Carousel from "react-multi-carousel";
 import CardSmall from '@/components/CardSmall';
+import { Link } from 'react-router-dom';
 
 const responsive = {
 	desktop: {
@@ -35,13 +36,17 @@ export default function Home() {
 				}}>
 					<div className='container mx-auto px-6 py-32'>
 						<h1 className='text-white font-extrabold text-2xl md:text-6xl leading-tight'>Подходящий трекер <br /> для каждого проекта</h1>
-						<button className="bg-lightGreen text-white rounded-md px-5 py-3 text-lg md:text-2xl font-semibold mt-6 filter hover:brightness-105 transition duration-100">Связаться</button>
+						<a href='#contactUs' >
+							<button className="bg-lightGreen text-white rounded-md px-5 py-3 text-lg md:text-2xl mt-6 font-semibold filter hover:brightness-105 transition duration-100">
+								Связаться
+							</button>
+						</a>
 					</div>
 				</section>
 
 				<section className="container mx-auto px-6 py-24">
 					<div className="flex justify-center mb-10">
-						<h1 className='text-5xl text-lightGreen font-semibold'>Оборудования и ПО:</h1>
+						<h1 className='text-2xl md:text-5xl text-lightGreen font-semibold'>Оборудования и ПО:</h1>
 					</div>
 					<div className="flex justify-center items-center">
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-12">
@@ -124,7 +129,7 @@ export default function Home() {
 					<Notification />
 				</section>
 
-				<section>
+				<section id='contactUs'>
 					<ContactUs />
 				</section>
 

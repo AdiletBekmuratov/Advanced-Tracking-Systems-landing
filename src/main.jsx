@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import '@/index.css';
 import "react-multi-carousel/lib/styles.css";
@@ -9,14 +9,16 @@ import App from '@/App';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Helmet
-			defaultTitle='Vite React Tailwind Starter'
-			titleTemplate='%s | Vite React Tailwind Starter'
-		>
-			<meta charSet='utf-8' />
-			<html lang='id' amp />
-		</Helmet>
-		<App />
+		<HelmetProvider >
+			<Helmet
+				defaultTitle='ATS'
+				titleTemplate='%s | ATS'
+			>
+				<meta charSet='utf-8' />
+				<html lang='id' amp />
+			</Helmet>
+			<App />
+		</HelmetProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
