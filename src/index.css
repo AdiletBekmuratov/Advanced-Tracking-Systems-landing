@@ -105,6 +105,10 @@
     @apply text-sm font-primary md:text-base;
   }
 
+	.card-medium-image{
+		@apply transform motion-safe:hover:scale-110 transition duration-200 ease-in !important;
+	} 
+
   .layout {
     /* 750px */
     /* max-width: 43.75rem; */
@@ -157,7 +161,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   transition: bottom 0.5s;
-  transition-delay: 0.65s;
+  transition-delay: 0.4s;
 	padding: 0 1.5rem;
 	text-align: center;
 }
