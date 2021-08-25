@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react'
 
-import circle1 from '/images/circle1.jpg'
-import circle2 from '/images/circle2.jpg'
-import circle3 from '/images/circle3.jpg'
 import { IoSpeedometerOutline } from 'react-icons/io5'
 import { BiCar } from 'react-icons/bi'
 
@@ -19,23 +16,6 @@ function Notification() {
 				</div>
 				<div className='flex items-center'>
 					<div className='grid grid-cols-2 mt-32'>
-						<div>
-							<table className='table-auto w-full' >
-								<tbody className='w-1/2'>
-									<tr>
-										<td className='smth'><img className='imgcon' src={circle1} /></td>
-										<td className='smth2'><img className='imgcon' src={circle1} /></td>
-									</tr>
-									<tr className=''>
-										<td className='smth3'>
-											<img className='imgcon' src={circle1} />
-										</td>
-									</tr>
-								</tbody>
-
-							</table>
-						</div>
-
 						<div className='grid grid-cols-1'>
 
 							<div className='flex px-32'>

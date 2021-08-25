@@ -2,6 +2,25 @@ import React from 'react';
 import Notification from '@/components/Notification';
 import ContactUs from '@/components/ContactUs';
 import Partners from '@/components/Partners'
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import CardMedium from '@/components/CardMedium';
+import Carousel from "react-multi-carousel";
+import CardSmall from '@/components/CardSmall';
+
+const responsive = {
+	desktop: {
+		breakpoint: { max: 3000, min: 1024 },
+		items: 3
+	},
+	tablet: {
+		breakpoint: { max: 1150, min: 464 },
+		items: 2
+	},
+	mobile: {
+		breakpoint: { max: 770, min: 0 },
+		items: 1
+	}
+};
 
 export default function Home() {
 	return (
@@ -62,73 +81,43 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="container mx-auto px-6 flex justify-center items-center py-24">
-					<div className="grid grid-cols-2 md:grid-cols-3 md:w-[950px] gap-4 md:gap-12">
-						<div className="shadow-xl md:shadow-xl border-lightGreen border-4 rounded-xl h-[300px] w-[270px] transform motion-safe:hover:scale-110 duration-200">
-							<div className="grid grid-col-1 gap-4 my-6 group-hover:scale-150 transition transform duration-200 ease-out">
-								<div className="flex justify-center"><img className="rounded-full object-cover w-[180px] h-[180px]" src="/public/images/circle1.jpg" /></div>
-								<div className="flex justify-center ml-[15px] w-[230px] text-center text-[18px] font-normal"><p>Спутниковый мониторинг Vasco</p></div>
-							</div>
-						</div>
-						<div className="shadow-xl md:shadow-xl border-lightGreen border-4 rounded-xl h-[300px] w-[270px] transform motion-safe:hover:scale-110 duration-200">
-							<div className="grid grid-col-1 gap-4 mt-12">
-								<div className="flex justify-center"><img className="h-[150px]" src="/public/images/circle2.jpg" /></div>
-								<div className="flex justify-center ml-[15px] w-[230px] text-center text-[18px] font-normal"><p>GPS трекеры</p></div>
-							</div>
-						</div>
-						<div className="shadow-xl md:shadow-xl border-lightGreen border-4 rounded-xl h-[300px] w-[270px] transform motion-safe:hover:scale-110 duration-200">
-							<div className="grid grid-col-1 gap-4 my-6">
-								<div className="flex justify-center"><img className="rounded-full object-cover w-[180px] h-[180px]" src="/public/images/circle3.jpg" /></div>
-								<div className="flex justify-center ml-[15px] w-[230px] text-center text-[18px] font-normal"><p>GPS трекеры для животных</p></div>
-							</div>
-						</div>
-						<div className="shadow-xl md:shadow-xl border-lightGreen border-4 rounded-xl h-[300px] w-[270px] transform motion-safe:hover:scale-110 duration-200">
-							<div className="grid grid-col-1 gap-4 my-6">
-								<div className="flex justify-center"><img className="rounded-full object-cover w-[180px] h-[180px]" src="/public/images/circle4.jpg" /></div>
-								<div className="flex justify-center ml-[15px] w-[230px] text-center text-[18px] font-normal"><p>In Vehicle Monitoring System (iVMS)</p></div>
-							</div>
-						</div>
-						<div className="shadow-xl md:shadow-xl border-lightGreen border-4 rounded-xl h-[300px] w-[270px] transform motion-safe:hover:scale-110 duration-200">
-							<div className="grid grid-col-1 gap-4 mt-8">
-								<div className="flex justify-center"><img className=" object-cover h-[150px]" src="/public/images/circle5.jpg" /></div>
-								<div className="flex justify-center ml-[15px] w-[230px] text-center text-[18px] font-normal mt-4"><p>Датчик уровня топлива  (ДУТ)</p></div>
-							</div>
-						</div>
-						<div className="shadow-xl md:shadow-xl border-lightGreen border-4 rounded-xl h-[300px] w-[270px] transform motion-safe:hover:scale-110 duration-200">
-							<div className="grid grid-col-1 gap-4 my-6">
-								<div className="flex justify-center"><img className="rounded-full object-cover w-[180px] h-[180px]" src="/public/images/circle6.jpg" /></div>
-								<div className="flex justify-center ml-[15px] w-[230px] text-center text-[18px] font-normal"><p>GPS трекеры для детей</p></div>
-							</div>
+				<section className="container mx-auto px-6 py-24">
+					<div className="flex mb-10">
+						<h1 className='text-5xl text-lightGreen font-semibold'>Оборудования и ПО:</h1>
+					</div>
+					<div className="flex justify-center items-center">
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-12">
+							<CardSmall image="/images/circle1.jpg" text='Спутниковый мониторинг Vasco' alt='c1' />
+							<CardSmall image="/images/circle2.jpg" text='GPS трекеры' alt='c2' />
+							<CardSmall image="/images/circle3.jpg" text='GPS трекеры для животных' alt='c3' />
+							<CardSmall image="/images/circle4.jpg" text='In Vehicle Monitoring System (iVMS)' alt='c4' />
+							<CardSmall image="/images/circle5.jpg" text='Датчик уровня топлива (ДУТ)' alt='c5' />
+							<CardSmall image="/images/circle6.jpg" text='GPS трекеры для детей' alt='c6' />
 						</div>
 					</div>
 				</section>
 
-				<section className="container mx-auto px-6 flex justify-center items-center py-24 border-t-4 border-lightGreen">
-					<div className="w-11/12 md:w-3/4">
-						<div className="grid grid-cols-1 md:grid-cols-8 items-center">
-							<div className="col-span-5"><p className="text-[16px] md:text-[20px] "> <span className="text-orange font-bold">Vasco</span> — программная платформа с web-интерфейсом для спутникового
-								мониторинга транспорта. Контролируйте автомобили, спецтехнику, стационарные объекты, людей. </p>
-							</div>
-							<div className="col-span-3 object-right">
-								<img className="w-3/4 md:w-[250px] mr-0 ml-auto" src="/public/images/map-gps.png" />
-							</div>
-						</div>
-
-						<div className="grid grid-cols-1 md:grid-cols-8 items-center">
-							<div className="col-span-4"><img className="w-5/6 rounded-2xl" src="/public/images/carss.jpg" alt="" /></div>
-							<div className="col-span-4"><p className="text-[16px] md:text-[20px]">Дополнительные датчики покажут температуру, вес, наклон, положение механизмов и десятки других
-								параметров мониторинга.</p>
-							</div>
-						</div>
-
-						<div className="grid grid-cols-1 md:grid-cols-8 items-center">
-							<div className="col-span-5"><p className="text-[16px] md:text-[20px]"><span className="text-lightGreen font-bold">Wialon</span> – оптимальное решение для интеллектуального GPS мониторинга и управления транспортом.
-							</p>
-							</div>
-							<div className="col-span-3"><img className="rounded-2xl" src="/public/images/trucks.jpg" /></div>
-						</div>
-						<h1 className='text-white font-extrabold text-6xl leading-tight'>Подходящий трекер <br /> для каждого проекта</h1>
-					</div>
+				<section className="container lg:max-w-6xl mx-auto px-6 py-24 border-t-4 border-lightGreen">
+					<Carousel responsive={responsive} infinite={false} itemClass='p-5'>
+						<CardMedium
+							image='https://images.unsplash.com/photo-1591397932448-e68f94f11b44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80'
+							title='Vasco'
+							desc='программная платформа с web-интерфейсом для спутникового мониторинга транспорта.'
+							alt='card1'
+						/>
+						<CardMedium
+							image='https://images.unsplash.com/photo-1621237675692-fb7f104bd241?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&w=1000&q=80'
+							title='Особенности'
+							desc='Дополнительные датчики покажут температуру, вес, наклон, положение механизмов и десятки других параметров мониторинга.'
+							alt='card2'
+						/>
+						<CardMedium
+							image='https://images.unsplash.com/photo-1621237675692-fb7f104bd241?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&w=1000&q=80'
+							title='Vasco'
+							desc='программная платформа с web-интерфейсом для спутникового мониторинга транспорта.'
+							alt='card3'
+						/>
+					</Carousel>
 				</section>
 
 				<section>
@@ -139,10 +128,10 @@ export default function Home() {
 					<ContactUs />
 				</section>
 
-				<section className='flex justify-center py-40 relative'>
+				<section className='container mx-auto px-6 py-24'>
 					<Partners />
 				</section>
-			</main>
+			</main >
 		</>
 	);
 }

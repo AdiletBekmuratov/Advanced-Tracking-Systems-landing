@@ -1,6 +1,4 @@
 import React from 'react'
-import Lottie from 'react-lottie';
-
 
 function ContactUs() {
 	return (
@@ -13,7 +11,6 @@ function ContactUs() {
 				backgroundSize: 'cover',
 				width: '100%',
 			}}>
-				{/* <Lottie options={defaultOptions1}/> */}
 				<div className="flex flex-col max-w-6xl mx-auto py-56 md:flex-row">
 					<div className="w-full mb-8 text-white md:w-1/2 md:px-6 sm:px-10 sm:-translate-y-16">
 						<h2 className="font-medium mb-8"> Заполните форму </h2>
