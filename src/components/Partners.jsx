@@ -40,7 +40,7 @@ function Partners({ scrollPosition }) {
 			<Swiper autoHeight={true} autoplay={{
 				"delay": 2500,
 				"disableOnInteraction": false
-			}} loop={true} spaceBetween={24} breakpoints={responsive} navigation={true} grabCursor={true}>
+			}} loop={true} spaceBetween={24} breakpoints={responsive} grabCursor={true}>
 				<SwiperSlide>
 					<LazyLoadImage className='object-contain w-40 h-20' src={Logo2} alt='aifc' scrollPosition={scrollPosition} effect='blur' />
 				</SwiperSlide>
