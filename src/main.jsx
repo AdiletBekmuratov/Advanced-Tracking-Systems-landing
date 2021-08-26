@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import '@/index.css';
-import "react-multi-carousel/lib/styles.css";
+import 'swiper/css/bundle';
 
 import App from '@/App';
 

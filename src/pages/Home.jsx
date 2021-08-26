@@ -4,28 +4,29 @@ import ContactUs from '@/components/ContactUs';
 import Partners from '@/components/Partners'
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import CardMedium from '@/components/CardMedium';
-import Carousel from "react-multi-carousel";
 import CardSmall from '@/components/CardSmall';
-import { Link } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const responsive = {
-	desktop: {
-		breakpoint: { max: 3000, min: 1024 },
-		items: 3
+	'0': {
+		'slidesPerView': 1,
 	},
-	tablet: {
-		breakpoint: { max: 1150, min: 464 },
-		items: 2
+	'770': {
+		'slidesPerView': 2,
 	},
-	mobile: {
-		breakpoint: { max: 770, min: 0 },
-		items: 1
-	}
+	'1150': {
+		'slidesPerView': 3,
+	},
 };
 
 export default function Home() {
 	return (
 		<>
+			<Toaster
+				position="top-right"
+				reverseOrder={false}
+			/>
 			<main className='bg-white'>
 				<section className="w-full h-[400px] sm:h-[600px]" id='alanya' style={{
 					backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images/home1.jpg)`,
@@ -36,7 +37,7 @@ export default function Home() {
 				}}>
 					<div className='container mx-auto px-6 py-32'>
 						<h1 className='text-white font-extrabold text-2xl md:text-6xl leading-tight'>Подходящий трекер <br /> для каждого проекта</h1>
-						<a href='#contactUs' >
+						<a href='/#contactUs' >
 							<button className="bg-lightGreen text-white rounded-md px-5 py-3 text-lg md:text-2xl mt-6 font-semibold filter hover:brightness-105 transition duration-100">
 								Связаться
 							</button>
@@ -61,26 +62,34 @@ export default function Home() {
 				</section>
 
 				<section className="container lg:max-w-6xl mx-auto px-6 py-24 border-t-4 border-lightGreen">
-					<Carousel responsive={responsive} infinite={false} itemClass='p-5'>
-						<CardMedium
-							image='https://images.unsplash.com/photo-1591397932448-e68f94f11b44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80'
-							title='Vasco'
-							desc='программная платформа с web-интерфейсом для спутникового мониторинга транспорта.'
-							alt='card1'
-						/>
-						<CardMedium
-							image='https://images.unsplash.com/photo-1621237675692-fb7f104bd241?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&w=1000&q=80'
-							title='Особенности'
-							desc='Дополнительные датчики покажут температуру, вес, наклон, положение механизмов и десятки других параметров мониторинга.'
-							alt='card2'
-						/>
-						<CardMedium
-							image='/images/trucks.jpg'
-							title='Wialon'
-							desc=' оптимальное решение для интеллектуального GPS мониторинга и управления транспортом. '
-							alt='card3'
-						/>
-					</Carousel>
+					<Swiper breakpoints={responsive} spaceBetween={24} grabCursor={true} loop={true}>
+						<SwiperSlide>
+							<CardMedium
+								image='https://images.unsplash.com/photo-1591397932448-e68f94f11b44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80'
+								title='Vasco'
+								desc='программная платформа с web-интерфейсом для спутникового мониторинга транспорта.'
+								alt='card1'
+							/>
+						</SwiperSlide>
+
+						<SwiperSlide>
+							<CardMedium
+								image='https://images.unsplash.com/photo-1621237675692-fb7f104bd241?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&w=1000&q=80'
+								title='Особенности'
+								desc='Дополнительные датчики покажут температуру, вес, наклон, положение механизмов и десятки других параметров мониторинга.'
+								alt='card2'
+							/>
+						</SwiperSlide>
+
+						<SwiperSlide>
+							<CardMedium
+								image='/images/trucks.jpg'
+								title='Wialon'
+								desc=' оптимальное решение для интеллектуального GPS мониторинга и управления транспортом. '
+								alt='card3'
+							/>
+						</SwiperSlide>
+					</Swiper>
 				</section>
 
 				<section className="bg-lightGreen">
