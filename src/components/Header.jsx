@@ -8,7 +8,7 @@ export default function Header() {
 	return (
 		<>
 			<div className="flex flex-wrap items-center justify-between px-2 py-2 bg-gray-100 z-50">
-				<div className="container px-4 mx-auto flex flex-wrap items-center justify-end gap-x-10">
+				<div className="container lg:max-w-6xl px-6 mx-auto flex flex-wrap items-center justify-end gap-x-10">
 					<p className="text-darkBlue flex items-center gap-x-2">
 						<HiOutlineMail className="text-lightGreen" />
 						adaynygmanov@gmail.com
@@ -20,7 +20,7 @@ export default function Header() {
 				</div>
 			</div>
 			<nav className="flex flex-wrap items-center justify-between px-2 py-4 bg-white sticky left-0 top-0 shadow-md z-50">
-				<div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+				<div className="container lg:max-w-6xl px-4 mx-auto flex flex-wrap items-center justify-between">
 					<div className="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start">
 						<img src={Logo} alt="Logo" className="h-[3rem] ml-3" />
 						<button

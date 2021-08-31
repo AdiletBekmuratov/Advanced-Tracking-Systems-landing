@@ -11,7 +11,7 @@ function Notification() {
 			</div>
 			<div className="flex flex-col space-y-5 relative">
 				<div className='grid grid-cols-1 lg:grid-cols-6 gap-6'>
-					<div className="text-5xl text-orange col-span-1 lg:pl-5 lg:border-l-2 border-darkBlue flex items-center">
+					<div className="text-5xl text-orange col-span-1 ">
 						<IoSpeedometerOutline />
 					</div>
 					<div className="col-span-1 lg:col-span-2 lg:pl-5 lg:border-l-2 border-darkBlue">
@@ -25,7 +25,7 @@ function Notification() {
 					</div>
 				</div>
 				<div className='grid grid-cols-1 lg:grid-cols-6 gap-6'>
-					<div className="text-5xl text-orange col-span-1 lg:pl-5 lg:border-l-2 border-darkBlue flex items-center">
+					<div className="text-5xl text-orange col-span-1">
 						<BiCar />
 					</div>
 					<div className="col-span-1 lg:col-span-2 lg:pl-5 lg:border-l-2 border-darkBlue">

@@ -22,20 +22,20 @@ function ContactUs() {
 	}
 
 	return (
-		<div className='grad w-full h-[700px] px-6 flex items-center' style={{
+		<div className='grad w-full h-[600px] px-6 py-10 flex items-center justify-center' style={{
 			backgroundImage: `linear-gradient(90deg,rgba(0, 87, 117, 0.6), rgba(0, 87, 117, 0.6)), url(/images/Track.png)`,
 			backgroundRepeat: 'no-repeat',
 			backgroundPosition: 'center',
 			backgroundSize: 'cover',
 			width: '100%',
 		}}>
-			<div className="container flex flex-col lg:max-w-6xl mx-auto py-56 md:flex-row">
-				<div className="w-full mb-8 text-white md:w-1/2 md:px-6 sm:px-10 sm:-translate-y-16">
+			<div className='container lg:max-w-6xl flex items-center flex-col md:flex-row justify-center'>
+				<div className="w-full mb-8 text-white md:w-1/2 md:px-6 sm:px-10">
 					<h2 className="text-lg md:text-4xl font-medium mb-8"> Заполните форму </h2>
 					<p className="text-base md:text-xl mb-6">Оставьте заявку на нашем сайте и узнайте больше о нашем GPS програмном обеспечении!	</p>
 					<p className="text-base md:text-xl">Мы свяжемся с вами в ближайшее время.</p>
 				</div>
-				<div className="w-full md:w-1/2 md:pl-16 md:px-3 h-full sm:-translate-y-16 sm:px-10 ">
+				<div className="w-full md:w-1/2 md:pl-16 md:px-3 h-full sm:px-10 ">
 					<form onSubmit={handleSubmit}>
 						<div className="mb-8">
 							<input type="text" placeholder='Ваше Имя' name="username" className="placeholder-gray-500 border-1 border-lightBlue rounded-xl px-3 py-2.5 w-full focus:ring-0 focus:invalid:ring-1 focus:invalid:ring-red-400" required={true} />
@@ -54,6 +54,7 @@ function ContactUs() {
 					</form>
 				</div>
 			</div>
+
 		</div>
 	)
 }

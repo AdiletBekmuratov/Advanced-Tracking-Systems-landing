@@ -35,7 +35,7 @@ export default function Home() {
 					backgroundSize: 'cover',
 					width: '100%',
 				}}>
-					<div className='container mx-auto px-6 py-32'>
+					<div className='container lg:max-w-6xl mx-auto px-6 py-32'>
 						<h1 className='text-white font-extrabold text-2xl md:text-6xl leading-tight'>Подходящий трекер <br /> для каждого проекта</h1>
 						<a href='/#contactUs' >
 							<button className="bg-lightGreen text-white rounded-md px-5 py-3 text-lg md:text-2xl mt-6 font-semibold filter hover:brightness-105 transition duration-100">
@@ -45,7 +45,7 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="container mx-auto px-6 py-24">
+				<section className="container lg:max-w-6xl mx-auto px-6 py-24">
 					<div className="flex justify-center mb-10">
 						<h1 className='text-2xl md:text-5xl text-lightGreen font-semibold'>Оборудования и ПО:</h1>
 					</div>
@@ -62,7 +62,7 @@ export default function Home() {
 				</section>
 
 				<section className="container lg:max-w-6xl mx-auto px-6 py-24 border-t-4 border-lightGreen">
-					<Swiper breakpoints={responsive} spaceBetween={24} grabCursor={true} loop={true}>
+					<Swiper breakpoints={responsive} spaceBetween={24} grabCursor={true}>
 						<SwiperSlide>
 							<CardMedium
 								image='https://images.unsplash.com/photo-1591397932448-e68f94f11b44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80'
@@ -93,18 +93,18 @@ export default function Home() {
 				</section>
 
 				<section className="bg-lightGreen">
-					<div className="container mx-auto px-6 py-24 flex flex-col justify-center">
+					<div className="container lg:max-w-6xl mx-auto px-6 py-24 flex flex-col justify-center">
 						<h1 className="text-white text-4xl font-normal mb-10">Процесс подключения</h1>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 							<div className="flex gap-x-4">
-								<div className="border-4 border-white rounded-md text-white h-20 w-20 flex items-center justify-center flex-shrink-0">
-									<p className="text-6xl font-bold">1</p>
+								<div className="border-4 border-white rounded-md text-white h-16 w-16 flex items-center justify-center flex-shrink-0">
+									<p className="text-4xl font-bold">1</p>
 								</div>
 								<div className="text-white text-lg md:text-2xl">
 									<p>
 										GPS-трекер
 									</p>
-									<p>
+									<p className='text-lg'>
 										После включения трекер осуществляет
 										прием информации от спутников системы
 										ГЛОНАСС/GPS, определяет свое
@@ -113,15 +113,15 @@ export default function Home() {
 									</p>
 								</div>
 							</div>
-							<div className="flex gap-x-4">
-								<div className="border-4 border-white rounded-md text-white h-20 w-20 flex items-center justify-center flex-shrink-0">
-									<p className="text-6xl font-bold">2</p>
+							<div className="flex space-x-4">
+								<div className="border-4 border-white rounded-md text-white h-16 w-16 flex items-center justify-center flex-shrink-0">
+									<p className="text-4xl font-bold">2</p>
 								</div>
 								<div className="text-white text-lg md:text-2xl">
 									<p>
 										Датчик топлива
 									</p>
-									<p>
+									<p className='text-lg'>
 										Считывает и мониторит уровень
 										топлива в баке, показывает текущий
 										уровень топлива, сливы и заправки.
@@ -134,7 +134,7 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="container mx-auto px-6 py-24">
+				<section className="container lg:max-w-6xl mx-auto px-6 py-24">
 					<Notification />
 				</section>
 
@@ -142,7 +142,7 @@ export default function Home() {
 					<ContactUs />
 				</section>
 
-				<section className='container mx-auto px-6 py-24'>
+				<section className='container lg:max-w-6xl mx-auto px-6 py-24'>
 					<Partners />
 				</section>
 			</main >
