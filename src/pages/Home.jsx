@@ -7,6 +7,8 @@ import CardMedium from '@/components/CardMedium';
 import CardSmall from '@/components/CardSmall';
 import { Toaster } from 'react-hot-toast';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 const responsive = {
 	'0': {
@@ -27,8 +29,10 @@ export default function Home() {
 				position="top-right"
 				reverseOrder={false}
 			/>
+			<Header />
+
 			<main className='bg-white'>
-				<section className="w-full h-[400px] sm:h-[600px]" id='alanya' style={{
+				<section className="w-full h-[400px] sm:h-[600px]" id='top' style={{
 					backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images/home1.jpg)`,
 					backgroundRepeat: 'no-repeat',
 					backgroundPosition: 'center',
@@ -45,7 +49,7 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="container lg:max-w-6xl mx-auto px-6 py-24">
+				<section className="container lg:max-w-6xl mx-auto px-6 py-24" id='equipments'>
 					<div className="flex justify-center mb-10">
 						<h1 className='text-2xl md:text-5xl text-lightGreen font-semibold'>Оборудования и ПО:</h1>
 					</div>
@@ -92,7 +96,7 @@ export default function Home() {
 					</Swiper>
 				</section>
 
-				<section className="bg-lightGreen">
+				<section className="bg-lightGreen" id='process'>
 					<div className="container lg:max-w-6xl mx-auto px-6 py-24 flex flex-col justify-center">
 						<h1 className="text-white text-4xl font-normal mb-10">Процесс подключения</h1>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -134,7 +138,7 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="container lg:max-w-6xl mx-auto px-6 py-24">
+				<section className="container lg:max-w-6xl mx-auto px-6 py-24" id='notification'>
 					<Notification />
 				</section>
 
@@ -142,10 +146,12 @@ export default function Home() {
 					<ContactUs />
 				</section>
 
-				<section className='container lg:max-w-6xl mx-auto px-6 py-24'>
+				<section className='container lg:max-w-6xl mx-auto px-6 py-24' id='partners'>
 					<Partners />
 				</section>
 			</main >
+
+			<Footer />
 		</>
 	);
 }

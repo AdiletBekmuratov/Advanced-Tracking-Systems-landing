@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Home from '@/pages/Home';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+const Home = React.lazy(() => import('@/pages/Home'))
+const NotFound = React.lazy(() => import('@/pages/NotFound'))
 
 export default function Routes() {
 	return (
 		<Router>
-			<Header />
-			<div className="overflow-x-hidden w-full h-full m-0 p-0">
-				<Switch>
-					<Route exact path='/' component={Home} />
-				</Switch>
+			<div className='min-h-screen flex flex-col justify-center'>
+				<Suspense fallback={
+					<div className='flex flex-col justify-center items-center'>
+						<div className="load-2">
+							<div className="line"></div>
+							<div className="line"></div>
+							<div className="line"></div>
+						</div>
+					</div>
+				}>
+					<Switch>
+						<Route exact path='/' component={Home} />
+						<Route component={NotFound} />
+					</Switch>
+				</Suspense>
 			</div>
-			<Footer />
 		</Router>
 	);
 }

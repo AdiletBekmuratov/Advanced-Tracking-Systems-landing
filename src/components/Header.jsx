@@ -22,7 +22,9 @@ export default function Header() {
 			<nav className="flex flex-wrap items-center justify-between px-2 py-4 bg-white sticky left-0 top-0 shadow-md z-50">
 				<div className="container lg:max-w-6xl px-4 mx-auto flex flex-wrap items-center justify-between">
 					<div className="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start">
-						<img src={Logo} alt="Logo" className="h-[3rem] ml-3" />
+						<a href="#top">
+							<img src={Logo} alt="Logo" className="h-[3rem] ml-3" />
+						</a>
 						<button
 							className="text-darkBlue cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
 							type="button"
@@ -41,31 +43,31 @@ export default function Header() {
 							<li className="nav-item">
 								<a
 									className="px-3 py-2 flex items-center text-base font-bold leading-snug text-darkBlue hover:opacity-75"
-									href="#pablo"
+									href="#equipments"
 								>
-									Услуги
+									Оборудования и ПО
 								</a>
 							</li>
 							<li className="nav-item">
 								<a
 									className="px-3 py-2 flex items-center text-base font-bold leading-snug text-darkBlue hover:opacity-75"
-									href="#pablo"
+									href="#process"
 								>
-									Возможности
+									Процесс подключения
 								</a>
 							</li>
 							<li className="nav-item">
 								<a
 									className="px-3 py-2 flex items-center text-base font-bold leading-snug text-darkBlue hover:opacity-75"
-									href="#pablo"
+									href="#partners"
 								>
-									GPS оборудования
+									Партнеры
 								</a>
 							</li>
 							<li className="nav-item">
 								<a
 									className="px-3 py-2 flex items-center text-base font-bold leading-snug text-darkBlue hover:opacity-75"
-									href="#pablo"
+									href="#contacts"
 								>
 									Контакты
 								</a>

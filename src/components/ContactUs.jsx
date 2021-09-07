@@ -8,6 +8,7 @@ function ContactUs() {
 	const handleSubmit = (event) => {
 		event.preventDefault()
 		setLoading(true)
+
 		toast.promise(emailjs.sendForm('service_sf50y1r', 'template_t85mqmc', event.target, 'user_0w8aCAe7lmOPhtRiTxmLt'), {
 			loading: 'Отправка...',
 			success: 'Мы свяжемся с вами в ближайшее время!',
