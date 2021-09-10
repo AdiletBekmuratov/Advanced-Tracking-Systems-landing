@@ -100,14 +100,14 @@ export default function Home() {
 
 				<section className="bg-lightGreen" id='process'>
 					<div className="container lg:max-w-6xl mx-auto px-6 py-24 flex flex-col justify-center">
-						<h1 className="text-white text-3xl font-normal mb-10">Процесс подключения</h1>
+						<h1 className="text-white text-3xl font-semibold mb-10">Процесс подключения</h1>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-							<div className="flex gap-x-4">
+							<div className="flex space-x-4">
 								<div className="border-4 border-white rounded-md text-white h-16 w-16 flex items-center justify-center flex-shrink-0">
 									<p className="text-4xl font-bold">1</p>
 								</div>
 								<div className="text-white text-lg md:text-xl">
-									<p>
+									<p className='font-semibold'>
 										GPS-трекер
 									</p>
 									<p className='text-lg'>
@@ -124,7 +124,7 @@ export default function Home() {
 									<p className="text-4xl font-bold">2</p>
 								</div>
 								<div className="text-white text-lg md:text-xl">
-									<p>
+									<p className='font-semibold'>
 										Датчик топлива
 									</p>
 									<p className='text-lg'>
