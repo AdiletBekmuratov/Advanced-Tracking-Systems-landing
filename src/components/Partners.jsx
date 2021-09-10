@@ -33,7 +33,7 @@ function Partners({ scrollPosition }) {
 	return (
 		<div>
 			<div className='flex mb-10'>
-				<h1 className='text-5xl font-semibold text-darkBlue'>
+				<h1 className='text-2xl md:text-3xl font-semibold text-darkBlue'>
 					Наши партнеры
 				</h1>
 			</div>

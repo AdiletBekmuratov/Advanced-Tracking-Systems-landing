@@ -22,7 +22,7 @@ export default function Header() {
 			<nav className="flex flex-wrap items-center justify-between px-2 py-4 bg-white sticky left-0 top-0 shadow-md z-50">
 				<div className="container lg:max-w-6xl px-4 mx-auto flex flex-wrap items-center justify-between">
 					<div className="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start">
-						<a href="#top">
+						<a href="#">
 							<img src={Logo} alt="Logo" className="h-[3rem] ml-3" />
 						</a>
 						<button
@@ -39,13 +39,21 @@ export default function Header() {
 						className={`lg:flex flex-grow items-center ${navbarOpen ? " flex" : " hidden"}`}
 						id="example-navbar-danger"
 					>
-						<ul className="flex flex-col lg:flex-row gap-x-12 list-none lg:ml-auto">
+						<ul className="flex flex-col lg:flex-row gap-x-4 list-none lg:ml-auto">
 							<li className="nav-item">
 								<a
 									className="px-3 py-2 flex items-center text-base font-bold leading-snug text-darkBlue hover:opacity-75"
 									href="#equipments"
 								>
 									Оборудования и ПО
+								</a>
+							</li>
+							<li className="nav-item">
+								<a
+									className="px-3 py-2 flex items-center text-base font-bold leading-snug text-darkBlue hover:opacity-75"
+									href="#service"
+								>
+									Услуги и возможности
 								</a>
 							</li>
 							<li className="nav-item">
@@ -59,15 +67,7 @@ export default function Header() {
 							<li className="nav-item">
 								<a
 									className="px-3 py-2 flex items-center text-base font-bold leading-snug text-darkBlue hover:opacity-75"
-									href="#partners"
-								>
-									Партнеры
-								</a>
-							</li>
-							<li className="nav-item">
-								<a
-									className="px-3 py-2 flex items-center text-base font-bold leading-snug text-darkBlue hover:opacity-75"
-									href="#contacts"
+									href="#contactUs"
 								>
 									Контакты
 								</a>

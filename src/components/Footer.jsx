@@ -24,10 +24,10 @@ const Footer = () => {
 						<div className="flex flex-col mb-2">
 							<span className="font-bold text-white uppercase md:mt-0 mb-2">Навигация</span>
 							<span className="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">Главная</a></span>
-							<span className="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">Услуги</a></span>
-							<span className="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">Возможности</a></span>
-							<span className="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">GPS оборудования</a></span>
-							<span className="my-2"><a href="#" className="text-white text-md filter hover:brightness-110">Контакты</a></span>
+							<span className="my-2"><a href="#equipments" className="text-white text-md filter hover:brightness-110">Оборудования и ПО</a></span>
+							<span className="my-2"><a href="#process" className="text-white text-md filter hover:brightness-110">Процесс подключения</a></span>
+							<span className="my-2"><a href="#partners" className="text-white text-md filter hover:brightness-110">Партнеры</a></span>
+							<span className="my-2"><a href="#contacts" className="text-white text-md filter hover:brightness-110">Контакты</a></span>
 						</div>
 						<div className="flex flex-col gap-y-2">
 							<span className="font-bold text-white uppercase md:mt-0 mb-2">Социальные сети</span>
@@ -51,7 +51,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="container mx-auto">
+			<div className="container lg:max-w-7xl mx-auto">
 				<div className="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
 					<div className="sm:w-2/3 text-center py-6 flex justify-center gap-x-6 mb-2">
 						<p className="text-sm text-white font-bold">

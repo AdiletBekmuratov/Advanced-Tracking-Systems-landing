@@ -7,7 +7,7 @@ function Notification() {
 	return (
 		<div>
 			<div className="mb-14">
-				<h1 className='text-darkBlue text-4xl font-semibold'>Отправка уведомлений</h1>
+				<h1 className='text-darkBlue text-3xl font-semibold'>Отправка уведомлений</h1>
 			</div>
 			<div className="flex flex-col space-y-5 relative">
 				<div className='grid grid-cols-1 lg:grid-cols-6 gap-6'>
@@ -15,10 +15,10 @@ function Notification() {
 						<IoSpeedometerOutline />
 					</div>
 					<div className="col-span-1 lg:col-span-2 lg:pl-5 lg:border-l-2 border-darkBlue">
-						<h1 className='text-4xl font-semibold text-darkBlue uppercase'>ПРЕВЫШЕНИЕ СКОРОСТИ</h1>
+						<h1 className='text-2xl font-semibold text-darkBlue uppercase'>ПРЕВЫШЕНИЕ СКОРОСТИ</h1>
 					</div>
 					<div className="col-span-1 lg:col-span-3 lg:pl-5 lg:border-l-2 border-darkBlue">
-						<p className="text-xl text-gray-500">
+						<p className="text-lg text-gray-500">
 							Система проинформирует о превышении
 							скоростии может даже заблокировать двигатель
 						</p>
@@ -29,10 +29,10 @@ function Notification() {
 						<BiCar />
 					</div>
 					<div className="col-span-1 lg:col-span-2 lg:pl-5 lg:border-l-2 border-darkBlue">
-						<h1 className='text-4xl font-semibold text-darkBlue uppercase'>ВЫЕЗД ИЗ <br /> ГЕО - ЗОНЫ</h1>
+						<h1 className='text-2xl font-semibold text-darkBlue uppercase'>ВЫЕЗД ИЗ <br /> ГЕО - ЗОНЫ</h1>
 					</div>
 					<div className="col-span-1 lg:col-span-3 lg:pl-5 lg:border-l-2 border-darkBlue">
-						<p className="text-xl text-gray-500">
+						<p className="text-lg text-gray-500">
 							При покидании ТС определенного участка срабатывает мобильное уведомление и может быть заблокирован двигатель
 						</p>
 					</div>

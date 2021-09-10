@@ -3,24 +3,14 @@ import Notification from '@/components/Notification';
 import ContactUs from '@/components/ContactUs';
 import Partners from '@/components/Partners'
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import CardMedium from '@/components/CardMedium';
 import CardSmall from '@/components/CardSmall';
 import { Toaster } from 'react-hot-toast';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
-const responsive = {
-	'0': {
-		'slidesPerView': 1,
-	},
-	'770': {
-		'slidesPerView': 2,
-	},
-	'1150': {
-		'slidesPerView': 3,
-	},
-};
+import trackIMG from '/images/gps-track.png'
+import { MdComputer } from 'react-icons/md'
+import { IoCarSport } from 'react-icons/io5'
 
 export default function Home() {
 	return (
@@ -40,7 +30,7 @@ export default function Home() {
 					width: '100%',
 				}}>
 					<div className='container lg:max-w-6xl mx-auto px-6 py-32'>
-						<h1 className='text-white font-extrabold text-2xl md:text-6xl leading-tight'>Подходящий трекер <br /> для каждого проекта</h1>
+						<h1 className='text-white font-extrabold text-2xl md:text-6xl leading-tight'>Решение для спутникового мониторинга и IoT</h1>
 						<a href='/#contactUs' >
 							<button className="bg-lightGreen text-white rounded-md px-5 py-3 text-lg md:text-2xl mt-6 font-semibold filter hover:brightness-105 transition duration-100">
 								Связаться
@@ -50,8 +40,8 @@ export default function Home() {
 				</section>
 
 				<section className="container lg:max-w-6xl mx-auto px-6 py-24" id='equipments'>
-					<div className="flex justify-center mb-10">
-						<h1 className='text-2xl md:text-5xl text-lightGreen font-semibold'>Оборудования и ПО:</h1>
+					<div className="flex mb-10">
+						<h1 className='text-2xl md:text-3xl text-darkBlue font-semibold'>Оборудования и ПО</h1>
 					</div>
 					<div className="flex justify-center items-center">
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-12">
@@ -65,46 +55,58 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="container lg:max-w-6xl mx-auto px-6 py-24 border-t-4 border-lightGreen">
-					<Swiper breakpoints={responsive} spaceBetween={24} grabCursor={true}>
-						<SwiperSlide>
-							<CardMedium
-								image='https://images.unsplash.com/photo-1591397932448-e68f94f11b44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80'
-								title='Vasco'
-								desc='программная платформа с web-интерфейсом для спутникового мониторинга транспорта.'
-								alt='card1'
-							/>
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<CardMedium
-								image='https://images.unsplash.com/photo-1621237675692-fb7f104bd241?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&w=1000&q=80'
-								title='Особенности'
-								desc='Дополнительные датчики покажут температуру, вес, наклон, положение механизмов и десятки других параметров мониторинга.'
-								alt='card2'
-							/>
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<CardMedium
-								image='/images/trucks.jpg'
-								title='Wialon'
-								desc=' оптимальное решение для интеллектуального GPS мониторинга и управления транспортом. '
-								alt='card3'
-							/>
-						</SwiperSlide>
-					</Swiper>
+				<section className="container lg:max-w-6xl mx-auto px-6 py-24 border-t-4 border-lightGreen" id='service'>
+					<div className="flex mb-10">
+						<h1 className='text-2xl md:text-3xl text-darkBlue font-semibold'>Услуги и возможности</h1>
+					</div>
+					<div className="flex justify-center items-center space-6">
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
+							<div className='flex flex-col items-center justify-center space-y-6'>
+								<div className='flex space-x-6'>
+									<div className='text-4xl text-darkBlue'>
+										<MdComputer />
+									</div>
+									<div className='text-lg'>
+										<strong className='text-darkBlue'>Vasco</strong> — программная платформа с
+										web-интерфейсом для <strong className='text-darkBlue'>спутникового
+											мониторинга транспорта</strong>. Система
+										обладает рядом функций, присущих
+										ПО для мониторинга и управления
+										автопарками.
+									</div>
+								</div>
+								<div className='flex space-x-6'>
+									<div className='text-4xl text-darkBlue'>
+										<IoCarSport />
+									</div>
+									<div className='text-lg'>
+										Контролируйте автомобили,
+										спецтехнику, стационарные объекты,
+										людей – для каждого проекта
+										найдется подходящий трекер. А
+										дополнительные датчики покажут
+										температуру, вес, наклон, положение
+										механизмов и десятки других
+										параметров мониторинга.
+									</div>
+								</div>
+							</div>
+							<div className='flex justify-center items-center'>
+								<img src={trackIMG} alt="trackIMG" />
+							</div>
+						</div>
+					</div>
 				</section>
 
 				<section className="bg-lightGreen" id='process'>
 					<div className="container lg:max-w-6xl mx-auto px-6 py-24 flex flex-col justify-center">
-						<h1 className="text-white text-4xl font-normal mb-10">Процесс подключения</h1>
+						<h1 className="text-white text-3xl font-normal mb-10">Процесс подключения</h1>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 							<div className="flex gap-x-4">
 								<div className="border-4 border-white rounded-md text-white h-16 w-16 flex items-center justify-center flex-shrink-0">
 									<p className="text-4xl font-bold">1</p>
 								</div>
-								<div className="text-white text-lg md:text-2xl">
+								<div className="text-white text-lg md:text-xl">
 									<p>
 										GPS-трекер
 									</p>
@@ -121,7 +123,7 @@ export default function Home() {
 								<div className="border-4 border-white rounded-md text-white h-16 w-16 flex items-center justify-center flex-shrink-0">
 									<p className="text-4xl font-bold">2</p>
 								</div>
-								<div className="text-white text-lg md:text-2xl">
+								<div className="text-white text-lg md:text-xl">
 									<p>
 										Датчик топлива
 									</p>
